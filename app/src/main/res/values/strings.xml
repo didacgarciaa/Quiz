@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Quiz_Android</string>
+    <string name="radiobutton">RadioButton</string>
+    <string name="radiobutton2">RadioButton</string>
+    <string name="radiobutton3">RadioButton</string>
+    <string name="radiobutton4">RadioButton</string>
+    <string name="verificar1">Verificar</string>
+    <string name="imatge">TODO</string>
+</resources>
