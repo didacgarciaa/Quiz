@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageView imatge;
     private Button verificar;
     private RadioGroup radioGroup;
+    private Button start;
 
     @SuppressLint("MissingInflatedId")
     @Override
