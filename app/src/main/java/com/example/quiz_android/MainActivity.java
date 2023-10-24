@@ -14,15 +14,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private RadioButton rb1;
-    private RadioButton rb2;
-    private RadioButton rb3;
-    private RadioButton rb4;
+    private Button rb1;
+    private Button rb2;
+    private Button rb3;
+    private Button rb4;
     private TextView textResposta;
     private ImageView imatge;
-    private Button verificar;
-    private RadioGroup radioGroup;
-    private Button start;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -34,9 +31,7 @@ public class MainActivity extends AppCompatActivity {
         rb3 = findViewById(R.id.resposta3);
         rb4 = findViewById(R.id.resposta4);
         imatge = findViewById(R.id.imatge);
-        verificar = findViewById(R.id.btnCheck);
         textResposta = findViewById(R.id.textResposta);
-        radioGroup = findViewById(R.id.radioGroup);
         int [] idImatges = {
                 R.drawable.ironman,
                 R.drawable.hulk,
@@ -64,12 +59,30 @@ public class MainActivity extends AppCompatActivity {
 
         };
         Metode.generadorPelicules(respostes,idImatges);
-        Metode.mostrarPeliculaAleatoria(Metode.generadorPelicules(respostes,idImatges),imatge, radioGroup, rb1, rb2, rb3, rb4);
+        Metode.mostrarPeliculaAleatoria(Metode.generadorPelicules(respostes,idImatges),imatge, rb1, rb2, rb3, rb4);
 
-        verificar.setOnClickListener(new View.OnClickListener() {
+        rb1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Metode.mostrarPeliculaAleatoria(Metode.generadorPelicules(respostes,idImatges),imatge, radioGroup, rb1, rb2, rb3, rb4);
+                Metode.mostrarPeliculaAleatoria(Metode.generadorPelicules(respostes,idImatges),imatge, rb1, rb2, rb3, rb4);
+            }
+        });
+        rb2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Metode.mostrarPeliculaAleatoria(Metode.generadorPelicules(respostes,idImatges),imatge, rb1, rb2, rb3, rb4);
+            }
+        });
+        rb3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Metode.mostrarPeliculaAleatoria(Metode.generadorPelicules(respostes,idImatges),imatge, rb1, rb2, rb3, rb4);
+            }
+        });
+        rb4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Metode.mostrarPeliculaAleatoria(Metode.generadorPelicules(respostes,idImatges),imatge, rb1, rb2, rb3, rb4);
             }
         });
     }

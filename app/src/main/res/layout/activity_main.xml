@@ -4,85 +4,88 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#11CD88"
+    android:background="#0D0B22"
     tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/imatge"
-        android:layout_width="332dp"
+        android:layout_width="337dp"
         android:layout_height="344dp"
-        android:layout_marginStart="58dp"
+        android:layout_marginStart="33dp"
         android:layout_marginTop="17dp"
-        android:layout_marginEnd="58dp"
-        android:layout_marginBottom="17dp"
+        android:layout_marginEnd="33dp"
+        android:layout_marginBottom="101dp"
         android:contentDescription="@string/imatge"
-        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+        app:layout_constraintBottom_toTopOf="@+id/resposta4"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.875"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="ImageContrastCheck"
-        tools:srcCompat="@tools:sample/avatars" />
-
-    <Button
-        android:id="@+id/btnCheck"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="33dp"
-        android:backgroundTint="#FDB21A"
-        android:text="@string/verificar1"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textResposta" />
+        tools:srcCompat="@drawable/avengers" />
 
     <TextView
         android:id="@+id/textResposta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="11dp"
-        android:layout_marginBottom="28dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnCheck"
-        app:layout_constraintStart_toStartOf="@+id/btnCheck"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+        android:layout_marginStart="166dp"
+        android:layout_marginBottom="444dp"
+        app:layout_constraintBottom_toTopOf="@+id/resposta1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <RadioGroup
-        android:id="@+id/radioGroup"
+    <Button
+        android:id="@+id/resposta1"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="53dp"
-        android:layout_marginEnd="53dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/textResposta"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="34dp"
+        android:backgroundTint="#02AED6"
+        android:text="Button"
+        app:layout_constraintBottom_toTopOf="@+id/resposta3"
+        app:layout_constraintEnd_toStartOf="@+id/resposta4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imatge"
-        tools:ignore="TextSizeCheck">
+        app:layout_constraintTop_toBottomOf="@+id/textResposta" />
 
-        <RadioButton
-            android:id="@+id/resposta1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/radiobutton"
-            tools:ignore="DuplicateSpeakableTextCheck" />
+    <Button
+        android:id="@+id/resposta2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginBottom="114dp"
+        android:backgroundTint="#11CD88"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/resposta3"
+        app:layout_constraintTop_toBottomOf="@+id/resposta4" />
 
-        <RadioButton
-            android:id="@+id/resposta2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/radiobutton2" />
+    <Button
+        android:id="@+id/resposta3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="114dp"
+        android:backgroundTint="#E8107C"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/resposta2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resposta1" />
 
-        <RadioButton
-            android:id="@+id/resposta3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/radiobutton3" />
-
-        <RadioButton
-            android:id="@+id/resposta4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/radiobutton4" />
-    </RadioGroup>
+    <Button
+        android:id="@+id/resposta4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginBottom="36dp"
+        android:backgroundTint="#FDB21A"
+        android:text="Button"
+        app:layout_constraintBottom_toTopOf="@+id/resposta2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/resposta1"
+        app:layout_constraintTop_toBottomOf="@+id/imatge" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
