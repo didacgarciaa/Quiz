@@ -1,16 +1,10 @@
 package com.example.quiz_android;
 
-import android.widget.ImageView;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
-
-import java.util.Random;
-
-public class Pelicules {
+public class Pelicula {
     private String resposta;
     private int idFoto;
 
-    public Pelicules(String name, int idFoto) {
+    public Pelicula(String name, int idFoto) {
         this.resposta = name;
         this.idFoto = idFoto;
     }

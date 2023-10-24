@@ -6,17 +6,17 @@ import android.widget.RadioGroup;
 
 import java.util.Random;
 
-public class Metodes {
-    public static Pelicules[] generadorPelicules(String[] respostes, int[] imatges) {
-        Pelicules[] arrayPelicules = new Pelicules[respostes.length];
+public class Metode {
+    public static Pelicula[] generadorPelicules(String[] respostes, int[] imatges) {
+        Pelicula[] arrayPelicules = new Pelicula[respostes.length];
         for (int i = 0; i < respostes.length && i < imatges.length; i++) {
-            Pelicules pelicula = new Pelicules(respostes[i], imatges[i]);
+            Pelicula pelicula = new Pelicula(respostes[i], imatges[i]);
             arrayPelicules[i] = pelicula;
         }
         return arrayPelicules;
     }
 
-    public static void mostrarPeliculaAleatoria(Pelicules[] arrayPelicules, ImageView imatge, RadioGroup radioGroup, RadioButton rb1, RadioButton rb2, RadioButton rb3, RadioButton rb4) {
+    public static void mostrarPeliculaAleatoria(Pelicula[] arrayPelicules, ImageView imatge, RadioGroup radioGroup, RadioButton rb1, RadioButton rb2, RadioButton rb3, RadioButton rb4) {
         radioGroup.clearCheck();
         Random random = new Random();
         int respostaCorrecta = random.nextInt(arrayPelicules.length);
