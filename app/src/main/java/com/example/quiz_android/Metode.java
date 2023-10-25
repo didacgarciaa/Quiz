@@ -2,8 +2,7 @@ package com.example.quiz_android;
 
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
+import android.widget.Button;
 
 import java.util.Random;
 
@@ -16,8 +15,12 @@ public class Metode {
         }
         return arrayPelicules;
     }
+
 /*
     public static void mostrarPelicula(Pelicula[] arrayPelicules, ImageView imatge , Button[] buttons) {
+
+        Random random = new Random();
+
         int respostaCorrecta = random.nextInt(arrayPelicules.length);
         int idFoto = arrayPelicules[respostaCorrecta].getFoto();
         imatge.setImageResource(idFoto);
@@ -46,8 +49,6 @@ public class Metode {
         rb2.setText(respostesValides[1]);
         rb3.setText(respostesValides[2]);
         rb4.setText(respostesValides[3]);
-
-        int seleccioFinal = radioGroup.getCheckedRadioButtonId();
 
     }
 

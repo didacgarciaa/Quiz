@@ -7,43 +7,31 @@
     android:background="#0D0B22">
 
     <Button
-        android:id="@+id/easyMode"
+        android:id="@+id/start"
         android:layout_width="106dp"
-        android:layout_height="64dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="214dp"
         android:backgroundTint="#11CD88"
-        android:text="@string/easy"
+        android:text="@string/start"
         android:textColor="#000000"
-        tools:ignore="VisualLintButtonSize"
-        tools:layout_editor_absoluteX="46dp"
-        tools:layout_editor_absoluteY="384dp" />
-
-    <Button
-        android:id="@+id/hardMode"
-        android:layout_width="106dp"
-        android:layout_height="62dp"
-        android:backgroundTint="#E8107C"
-        android:text="@string/hard"
-        android:textColor="#000000"
-        tools:layout_editor_absoluteX="153dp"
-        tools:layout_editor_absoluteY="488dp" />
-
-    <Button
-        android:id="@+id/mediumMode"
-        android:layout_width="106dp"
-        android:layout_height="62dp"
-        android:backgroundTint="#FDB21A"
-        android:text="@string/medium"
-        android:textColor="#000000"
-        tools:ignore="VisualLintButtonSize"
-        tools:layout_editor_absoluteX="258dp"
-        tools:layout_editor_absoluteY="385dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        tools:ignore="VisualLintButtonSize" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="390dp"
-        android:layout_height="344dp"
+        android:layout_width="387dp"
+        android:layout_height="342dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="109dp"
         android:contentDescription="@string/logo"
-        app:srcCompat="@drawable/quizlogo"
-        tools:layout_editor_absoluteX="11dp" />
+        app:layout_constraintBottom_toTopOf="@+id/start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/quizlogo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

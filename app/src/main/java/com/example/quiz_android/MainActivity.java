@@ -19,10 +19,9 @@ import java.util.Collections;
 public class MainActivity extends AppCompatActivity {
 
     private Button[] buttons = new Button[4];
+
     private TextView textResposta;
     private ImageView imatge;
-    private Button verificar;
-    private RadioGroup radioGroup;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -33,8 +32,8 @@ public class MainActivity extends AppCompatActivity {
 
         Partida partida = new Partida();
         imatge = findViewById(R.id.imatge);
-        verificar = findViewById(R.id.btnCheck);
         textResposta = findViewById(R.id.textResposta);
+
 
         int [] idImatges = Resources.getIdImatges();
         String[] respostes = Resources.getRespostes();
@@ -46,15 +45,7 @@ public class MainActivity extends AppCompatActivity {
         }
         Log.d("1","ewew");
 
-        partida.mostrarPelicula(peliculas,imatge , buttons);
 
 
-        verificar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                partida.mostrarPelicula(peliculas,imatge , buttons);
-            }
-        });
     }
 }
