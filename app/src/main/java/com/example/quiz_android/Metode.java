@@ -4,7 +4,11 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Button;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Random;
+import java.util.Set;
 
 public class Metode {
     public static Pelicula[] generadorPelicules(String[] respostes, int[] imatges) {
@@ -15,7 +19,19 @@ public class Metode {
         }
         return arrayPelicules;
     }
-
+    public static List<Integer> generarRespostas(Set<Integer> nums) {
+        Random random = new Random();
+        while (nums.size() < 4) {
+            int numeroAleatorio = random.nextInt(10); // Generar un número entre 1 y 10
+            nums.add(numeroAleatorio);
+        }
+        List<Integer> list = new ArrayList<>();
+        for (Integer item : nums) {
+            list.add(item);
+        }
+        Collections.shuffle(list);
+        return list;
+    }
 /*
     public static void mostrarPelicula(Pelicula[] arrayPelicules, ImageView imatge , Button[] buttons) {
 

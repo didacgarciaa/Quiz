@@ -19,7 +19,6 @@ import java.util.Collections;
 public class MainActivity extends AppCompatActivity {
 
     private Button[] buttons = new Button[4];
-
     private TextView textResposta;
     private ImageView imatge;
 
@@ -42,8 +41,19 @@ public class MainActivity extends AppCompatActivity {
         for (int i = 0; i < 4; i++) {
             int ButtonId = getResources().getIdentifier("resposta" + (i + 1), "id", getPackageName());
             buttons[i] = findViewById(ButtonId);
+            int finalI = i;
+            buttons[i].setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if(partida.comprobarResposta(buttons[finalI].getText().toString(),peliculas)){
+                        partida.mostrarPelicula(peliculas,imatge ,buttons);
+                    };
+                }
+            });
+
         }
-        Log.d("1","ewew");
+
+        partida.mostrarPelicula(peliculas,imatge,buttons);
 
 
 
