@@ -7,18 +7,23 @@
     android:background="#0D0B22"
     tools:context=".MainActivity">
 
+    <include
+        android:id="@+id/include2"
+        layout="@layout/toolbar"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textResposta"
+        app:layout_constraintStart_toStartOf="parent"></include>
+
     <ImageView
         android:id="@+id/imatge"
-        android:layout_width="337dp"
-        android:layout_height="344dp"
-        android:layout_marginStart="33dp"
+        android:layout_width="345dp"
+        android:layout_height="380dp"
+        android:layout_marginStart="34dp"
         android:layout_marginTop="17dp"
-        android:layout_marginEnd="33dp"
-        android:layout_marginBottom="101dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="46dp"
         android:contentDescription="@string/imatge"
-        app:layout_constraintBottom_toTopOf="@+id/resposta4"
+        app:layout_constraintBottom_toTopOf="@+id/score"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.875"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="ImageContrastCheck"
@@ -28,10 +33,12 @@
         android:id="@+id/textResposta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="166dp"
-        android:layout_marginBottom="444dp"
-        app:layout_constraintBottom_toTopOf="@+id/resposta1"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="126dp"
+        android:layout_marginEnd="126dp"
+        android:layout_marginBottom="353dp"
+        app:layout_constraintBottom_toTopOf="@+id/progressBar"
+        app:layout_constraintEnd_toEndOf="@+id/progressBar"
+        app:layout_constraintStart_toStartOf="@+id/imatge"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
@@ -46,7 +53,7 @@
         app:layout_constraintBottom_toTopOf="@+id/resposta3"
         app:layout_constraintEnd_toStartOf="@+id/resposta4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textResposta" />
+        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
 
     <Button
         android:id="@+id/resposta2"
@@ -67,7 +74,7 @@
         android:layout_height="0dp"
         android:layout_marginStart="40dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginBottom="114dp"
+        android:layout_marginBottom="113dp"
         android:backgroundTint="#E8107C"
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -85,6 +92,29 @@
         android:text="Button"
         app:layout_constraintBottom_toTopOf="@+id/resposta2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/resposta1"
+        app:layout_constraintTop_toBottomOf="@+id/score" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="174dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="57dp"
+        app:layout_constraintBottom_toTopOf="@+id/resposta1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textResposta"
+        android:progressTint="#11CD88"/>
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/resposta4"
+        app:layout_constraintEnd_toEndOf="@+id/resposta1"
         app:layout_constraintStart_toEndOf="@+id/resposta1"
         app:layout_constraintTop_toBottomOf="@+id/imatge" />
 

@@ -1,19 +1,25 @@
 package com.example.quiz_android;
 
-import android.util.Log;
+
+import android.content.Context;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
+import android.widget.TextView;
+import android.widget.Toast;
 
-import java.util.ArrayList;
-import java.util.Collections;
+import androidx.appcompat.app.AppCompatActivity;
+
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Random;
 import java.util.Set;
 
-public class Partida {
+public class Partida extends AppCompatActivity {
     public static int contador = 0;
+    public static  int ratxa = 0;
 
     public Partida(){
 
@@ -39,16 +45,30 @@ public class Partida {
             i++;
         }
 
+
     }
-    public static boolean comprobarResposta(String resposta,Pelicula[] arrayPelicules) {
+    public boolean comprobarResposta(String resposta, Pelicula[] arrayPelicules, ProgressBar progressBar, TextView score,Button button) {
 
         if(resposta.equals(arrayPelicules[contador].getResposta())){
             contador ++;
+            ratxa ++;
+            progressBar.incrementProgressBy(10);
+            String text1 = String.valueOf(ratxa);
+            score.setText("Ratxa: " + text1);
             return true;
         }
         else{
+            ratxa = 0;
+            String text1 = String.valueOf(ratxa);
+            score.setText("Ratxa: " + text1);
             return false;
         }
     }
+
+    public void animacioError(Context context, Button respostaFinal) {
+        Animation shakeAnimation = AnimationUtils.loadAnimation(context, R.anim.shake);
+        respostaFinal.startAnimation(shakeAnimation);
+    }
+
 
 }
