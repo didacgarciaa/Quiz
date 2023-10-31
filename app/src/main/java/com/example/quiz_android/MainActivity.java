@@ -16,7 +16,6 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
 
     private Button[] buttons = new Button[4];
-    private TextView textResposta;
     private ImageView imatge;
 
     @SuppressLint("MissingInflatedId")
@@ -28,11 +27,11 @@ public class MainActivity extends AppCompatActivity {
 
         Partida partida = new Partida();
         imatge = findViewById(R.id.imatge);
-        textResposta = findViewById(R.id.textResposta);
         ImageView backArrow = findViewById(R.id.backArrow);
         ImageView menuSettings = findViewById(R.id.menuSettings);
         ProgressBar progressBar = findViewById(R.id.progressBar);
         TextView score = findViewById(R.id.score);
+        TextView bestScore = findViewById(R.id.bestScore);
 
 
         int [] idImatges = Resources.getIdImatges();
@@ -42,12 +41,11 @@ public class MainActivity extends AppCompatActivity {
         for (int i = 0; i < 4; i++) {
             int ButtonId = getResources().getIdentifier("resposta" + (i + 1), "id", getPackageName());
             buttons[i] = findViewById(ButtonId);
-            Button button = findViewById(ButtonId);
             int finalI = i;
             buttons[i].setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    if(partida.comprobarResposta(buttons[finalI].getText().toString(),peliculas,progressBar,score,button)){
+                    if(partida.comprobarResposta(buttons[finalI].getText().toString(),peliculas,progressBar,score)){
                         partida.mostrarPelicula(peliculas,imatge ,buttons);
                     };
                 }

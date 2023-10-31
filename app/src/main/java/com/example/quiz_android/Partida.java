@@ -1,17 +1,12 @@
 package com.example.quiz_android;
 
 
-import android.content.Context;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
@@ -44,10 +39,8 @@ public class Partida extends AppCompatActivity {
             buttons[i].setText(arrayPelicules[n].getResposta());
             i++;
         }
-
-
     }
-    public boolean comprobarResposta(String resposta, Pelicula[] arrayPelicules, ProgressBar progressBar, TextView score,Button button) {
+    public boolean comprobarResposta(String resposta, Pelicula[] arrayPelicules, ProgressBar progressBar, TextView score) {
 
         if(resposta.equals(arrayPelicules[contador].getResposta())){
             contador ++;
@@ -59,16 +52,10 @@ public class Partida extends AppCompatActivity {
         }
         else{
             ratxa = 0;
+            progressBar.setProgress(0);
             String text1 = String.valueOf(ratxa);
             score.setText("Ratxa: " + text1);
             return false;
         }
     }
-
-    public void animacioError(Context context, Button respostaFinal) {
-        Animation shakeAnimation = AnimationUtils.loadAnimation(context, R.anim.shake);
-        respostaFinal.startAnimation(shakeAnimation);
-    }
-
-
 }
