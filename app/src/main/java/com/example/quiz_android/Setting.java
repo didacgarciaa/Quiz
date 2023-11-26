@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.ImageView;
 
 import androidx.annotation.Nullable;
@@ -17,6 +18,9 @@ public class Setting extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.settings);
         ImageView backArrow = findViewById(R.id.backArrow);
+        WebView settingPage = (WebView) findViewById(R.id.settingPage);
+        settingPage.loadUrl("file:///android_asset/index.html");
+
         backArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

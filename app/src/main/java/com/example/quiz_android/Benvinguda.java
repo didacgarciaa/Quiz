@@ -23,6 +23,9 @@ import java.util.ArrayList;
 
 public class Benvinguda extends AppCompatActivity {
     private Button start;
+    private TextView bestScore;
+
+    public Benvinguda(){}
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +35,6 @@ public class Benvinguda extends AppCompatActivity {
         tableLayout.setGravity(Gravity.CENTER);
         tableLayout.setStretchAllColumns(true);
         ImageView menuSettings = findViewById(R.id.menuSettings);
-
 
         start.setOnClickListener(new View.OnClickListener() {
             @Override

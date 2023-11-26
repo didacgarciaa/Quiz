@@ -2,16 +2,16 @@ package com.example.quiz_android;
 
 public class Resources {
     private static  int [] idImatges = {
-            R.drawable.ironman,
-            R.drawable.hulk,
-            R.drawable.avengers,
-            R.drawable.spiderman,
-            R.drawable.guardiansofthegalaxy,
-            R.drawable.daredevil,
-            R.drawable.blackpanther,
-            R.drawable.doctorstrange,
-            R.drawable.deadpool,
-            R.drawable.thor
+            R.drawable.ironman4,
+            R.drawable.hulk4,
+            R.drawable.avengers4,
+            R.drawable.spiderman4,
+            R.drawable.guardiansofthegalaxy4,
+            R.drawable.daredevil4,
+            R.drawable.blackpanther4,
+            R.drawable.doctorstrange4,
+            R.drawable.deadpool4,
+            R.drawable.thor4
     };
 
     private static  String[] respostes = {
