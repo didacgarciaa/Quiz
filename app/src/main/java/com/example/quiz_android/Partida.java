@@ -17,12 +17,9 @@ public class Partida extends AppCompatActivity {
     public static int contador = 0;
     public static  int ratxa = 0;
 
-    public Partida(){
-
-    }
+    public Partida(){}
 
     public static void mostrarPelicula(Pelicula[] arrayPelicules, ImageView imatge , Button[] buttons) {
-
 
         int idFoto = arrayPelicules[contador].getFoto();
         imatge.setImageResource(idFoto);
@@ -66,5 +63,8 @@ public class Partida extends AppCompatActivity {
             Intent intent = new Intent(Partida.this, Benvinguda.class);
             startActivity(intent);
         }
+    }
+    public void MostraPista(){
+
     }
 }
