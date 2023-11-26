@@ -53,7 +53,7 @@ public class Benvinguda extends AppCompatActivity {
         getPuntuacio(getBaseContext(),tableLayout);
 
     }
-    public void getPuntuacio(Context context ,TableLayout tableLayout){
+    public void getPuntuacio(Context context, TableLayout tableLayout) {
         BD bdUtilitat = new BD(context);
         SQLiteDatabase bd = bdUtilitat.getWritableDatabase();
         String[] projeccio = {
@@ -62,8 +62,7 @@ public class Benvinguda extends AppCompatActivity {
                 "ratxe"
         };
 
-        String ordre =
-                "puntuacio" + " ASC";
+        String ordre = "puntuacio ASC";
 
         Cursor c = bd.query(
                 "Resultats",  // taula
@@ -75,12 +74,12 @@ public class Benvinguda extends AppCompatActivity {
                 ordre,
                 "5"
         );
+
         int columnaPuntuacio = c.getColumnIndex("puntuacio");
         int columnaData = c.getColumnIndex("data");
 
-        if (c.isBeforeFirst()) {
-            int i=0;
-            c.moveToFirst();
+        if (c.moveToFirst()) {
+            int i = 0;
             do {
                 i++;
                 TableRow row = new TableRow(this);
@@ -88,10 +87,18 @@ public class Benvinguda extends AppCompatActivity {
                         ViewGroup.LayoutParams.MATCH_PARENT,
                         ViewGroup.LayoutParams.WRAP_CONTENT);
                 row.setLayoutParams(layoutParams);
-                generarFila(row, c.getString(columnaData), c.getString(columnaPuntuacio), tableLayout,i);
+                generarFila(row, c.getString(columnaData), c.getString(columnaPuntuacio), tableLayout, i);
             } while (c.moveToNext());
+        } else {
+            // Handle the case where the cursor is empty
+            Log.d("CursorInfo", "Cursor is empty");
         }
+
+        // Close the cursor and database when done
+        c.close();
+        bd.close();
     }
+
     public void generarFila(TableRow row, String data, String puntuacio ,TableLayout tableLayout,int i) {
         TextView textView2 = new TextView(this);
         textView2.setText(i + ". ");

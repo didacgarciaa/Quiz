@@ -18,7 +18,7 @@ public class Pelicula {
 
     public String[] getPistes(){return pistes;};
     public void setPistes(String[] pistes){this.pistes = pistes;}
-    public int[] getFoto() {
+    public List<Integer> getFoto() {
         return idFoto;
     }
 

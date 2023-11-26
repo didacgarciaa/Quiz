@@ -35,8 +35,8 @@ public class Partida extends AppCompatActivity {
 
     public static void mostrarPelicula(Pelicula[] arrayPelicules, ImageView imatge , Button[] buttons) {
 
-        int idFoto = arrayPelicules[contador].getFoto();
-        imatge.setImageResource(idFoto);
+        List<Integer> idFoto = arrayPelicules[contador].getFoto();
+        imatge.setImageResource(idFoto.get(1));
 
         Set<Integer> numerosUnicos = new HashSet<>();
 
@@ -51,7 +51,7 @@ public class Partida extends AppCompatActivity {
             i++;
         }
     }
-    public boolean comprobarResposta(String resposta, Pelicula[] arrayPelicules, ProgressBar progressBar, TextView score,Context context,TextView textPista) {
+    public boolean comprobarResposta(String resposta, Pelicula[] arrayPelicules, ProgressBar progressBar, TextView score,Context context,TextView textPista,ImageView imatge) {
 
         if(resposta.equals(arrayPelicules[contador].getResposta())){
             contador ++;
@@ -85,16 +85,17 @@ public class Partida extends AppCompatActivity {
 
                     bd.close();
                 }
-
                 return true;
             }
             else{
                 nErrors = 0;
-            progressBar.incrementProgressBy(10);
+                progressBar.incrementProgressBy(10);
                 String text1 = String.valueOf(ratxa);
                 score.setText("Ratxa: " + text1);
-            textPista.setText("");
-            FinalPartida();
+                textPista.setText("");
+                List<Integer> idFoto = arrayPelicules[contador].getFoto();
+                imatge.setImageResource(idFoto.get(nErrors));
+                FinalPartida();
                 return true;
             }
 

@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
             buttons[i].setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    if(partida.comprobarResposta(buttons[finalI].getText().toString(),peliculas,progressBar,score,getBaseContext(),textPista)){
+                    if(partida.comprobarResposta(buttons[finalI].getText().toString(),peliculas,progressBar,score,getBaseContext(),textPista,imatge)){
                         partida.mostrarPelicula(peliculas,imatge ,buttons);
                     };
                 }

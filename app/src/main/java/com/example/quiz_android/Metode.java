@@ -1,5 +1,7 @@
 package com.example.quiz_android;
 
+import static java.util.logging.Logger.global;
+
 import android.content.Context;
 import android.widget.Button;
 import android.content.res.Resources;
@@ -14,10 +16,10 @@ import android.view.animation.AnimationUtils;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Metode extends AppCompatActivity {
+    public static int contArray = 0;
     public Metode(){}
     public static Pelicula[] generadorPelicules(String[] respostes, int[] imatges,Context context) {
         Pelicula[] arrayPelicules = new Pelicula[respostes.length];
-        int contArray = 0;
         for (int i = 0; i < respostes.length; i++) {
             String[] idPistes = new String[]{"iron_man", "hulk", "avengers", "spider_man", "guardians_of_the_galaxy", "daredevil", "black_panther", "doctor_strange", "deadpool", "thor"};
             Pelicula pelicula = new Pelicula(respostes[i],GeneraArrayImatges(imatges,idPistes[i],contArray));
@@ -50,13 +52,15 @@ public class Metode extends AppCompatActivity {
             return new String[0];
         }
     }
-    public static List<Integer> GeneraArrayImatges(int [] imatges,String idPista,int contArray){
-        List<Integer> idImatges =new ArrayList<>();
-        for (int i = contArray; contArray<imatges.length;i++){
-            for(int t = 0; i<4;i++){
+    public static List<Integer> GeneraArrayImatges(int[] imatges, String idPista, int contArray) {
+        List<Integer> idImatges = new ArrayList<>();
+
+        for (int i = contArray; i < imatges.length; i++) {
+            for (int t = 0; t < 4; t++) {
                 idImatges.add(imatges[i]);
             }
         }
         return idImatges;
     }
+
 }
