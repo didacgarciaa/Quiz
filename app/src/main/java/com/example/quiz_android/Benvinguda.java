@@ -40,6 +40,7 @@ public class Benvinguda extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Benvinguda.this, MainActivity.class);
+                finish();
                 startActivity(intent);
             }
         });
@@ -47,6 +48,7 @@ public class Benvinguda extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Benvinguda.this, Setting.class);
+                finish();
                 startActivity(intent);
             }
         });

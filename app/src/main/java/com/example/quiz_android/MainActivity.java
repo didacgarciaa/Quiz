@@ -57,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, Benvinguda.class);
+                finish();
                 startActivity(intent);
             }
         });
@@ -68,7 +69,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
         partida.mostrarPelicula(peliculas,imatge,buttons);
-
 
     }
 }

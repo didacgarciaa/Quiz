@@ -28,7 +28,7 @@ import java.util.Set;
 public class Partida extends AppCompatActivity {
     public static int contador = 0;
     private LocalDateTime fechaActual = LocalDateTime.now();
-    public static int nErrors = 0;
+    public static int nErrors = 1;
     public static  int ratxa = 0;
 
     public Partida(){}
@@ -36,7 +36,7 @@ public class Partida extends AppCompatActivity {
     public static void mostrarPelicula(Pelicula[] arrayPelicules, ImageView imatge , Button[] buttons) {
 
         List<Integer> idFoto = arrayPelicules[contador].getFoto();
-        imatge.setImageResource(idFoto.get(1));
+        imatge.setImageResource(idFoto.get(0));
 
         Set<Integer> numerosUnicos = new HashSet<>();
 
@@ -54,6 +54,7 @@ public class Partida extends AppCompatActivity {
     public boolean comprobarResposta(String resposta, Pelicula[] arrayPelicules, ProgressBar progressBar, TextView score,Context context,TextView textPista,ImageView imatge) {
 
         if(resposta.equals(arrayPelicules[contador].getResposta())){
+
             contador ++;
             ratxa ++;
             if(contador == 10){
@@ -88,34 +89,49 @@ public class Partida extends AppCompatActivity {
                 return true;
             }
             else{
-                nErrors = 0;
+                nErrors = 1;
                 progressBar.incrementProgressBy(10);
                 String text1 = String.valueOf(ratxa);
                 score.setText("Ratxa: " + text1);
                 textPista.setText("");
-                List<Integer> idFoto = arrayPelicules[contador].getFoto();
-                imatge.setImageResource(idFoto.get(nErrors));
-                FinalPartida();
+                FinalPartida(this);
                 return true;
             }
 
         }
         else{
-            ratxa = 0;
-            nErrors++;
-            progressBar.setProgress(0);
-            String text1 = String.valueOf(ratxa);
-            score.setText("Ratxa: " + text1);
-            String[]pistes = arrayPelicules[contador].getPistes();
-            textPista.setText(pistes[nErrors]);
-            FinalPartida();
+            if(nErrors == 4) {
+                Intent intent = new Intent(context, Benvinguda.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                finish();
+                context.startActivity(intent);
+            }
+            else{
+                ratxa = 0;
+                FinalPartida(context);
+                progressBar.setProgress(0);
+                String text1 = String.valueOf(ratxa);
+                score.setText("Ratxa: " + text1);
+                String[]pistes = arrayPelicules[contador].getPistes();
+
+                textPista.setText(pistes[nErrors]);
+                List<Integer> idFoto = arrayPelicules[contador].getFoto();
+                Log.d("TAG", idFoto.get(nErrors) + "");
+                imatge.setImageResource(idFoto.get(nErrors));
+                Log.d("TAG", nErrors +" " + (nErrors == 4));
+                nErrors++;
+            }
+
             return false;
         }
     }
-    public void FinalPartida(){
-        if(ratxa == 10) {
-            Intent intent = new Intent(Partida.this, Benvinguda.class);
-            startActivity(intent);
+    public void FinalPartida(Context context){
+        if(ratxa == 10 ) {
+
+            Intent intent = new Intent(context, Benvinguda.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            finish();
+            context.startActivity(intent);
         }
     }
 

@@ -13,63 +13,74 @@
         <item>@array/deadpool</item>
         <item>@array/thor</item>
     </array>
-        <string-array name="iron_man">
-            <item>El heroe principal es un genio multimillonario.</item>
-            <item>Su traje de superheroe es tecnologicamente avanzado y le otorga poderes.</item>
-            <item>La pelicula marca el inicio del Universo Cinematografico de Marvel (MCU).</item>
-        </string-array>
 
-        <string-array name="hulk">
-            <item>El protagonista se transforma en un gigante verde enojado.</item>
-            <item>La pelicula explora los peligros de la radiacion gamma.</item>
-            <item>La primera aparicion de este personaje en el MCU.</item>
-        </string-array>
+    <string-array name="iron_man">
+        <item>El heroe principal es un genio multimillonario.</item>
+        <item>Su traje de superheroe es tecnologicamente avanzado y le otorga poderes.</item>
+        <item>La pelicula marca el inicio del Universo Cinematografico de Marvel (MCU).</item>
+        <item>Tony Stark, el protagonista, es interpretado por Robert Downey Jr.</item>
+    </string-array>
 
-        <string-array name="avengers">
-            <item>Reune a varios superheroes de Marvel para enfrentarse a una amenaza global.</item>
-            <item>Loki es el principal antagonista.</item>
-            <item>La pelicula destaca la importancia del trabajo en equipo.</item>
-        </string-array>
+    <string-array name="hulk">
+        <item>El protagonista se transforma en un gigante verde enojado.</item>
+        <item>La pelicula explora los peligros de la radiacion gamma.</item>
+        <item>La primera aparicion de este personaje en el MCU.</item>
+        <item>La version de Hulk en esta pelicula es interpretada por Edward Norton.</item>
+    </string-array>
 
-        <string-array name="spider_man">
-            <item>El heroe es conocido por su agilidad y sentido aracnido.</item>
-            <item>La historia se centra en un joven estudiante de secundaria con habilidades sobrehumanas.</item>
-            <item>Su traje tiene detalles iconicos como una arana en el pecho.</item>
-        </string-array>
+    <string-array name="avengers">
+        <item>Reune a varios superheroes de Marvel para enfrentarse a una amenaza global.</item>
+        <item>Loki es el principal antagonista.</item>
+        <item>La pelicula destaca la importancia del trabajo en equipo.</item>
+        <item>La primera pelicula de los Vengadores fue lanzada en 2012.</item>
+    </string-array>
 
-        <string-array name="guardians_of_the_galaxy">
-            <item>El equipo esta formado por personajes de diferentes especies y origenes.</item>
-            <item>La pelicula presenta una banda sonora memorable de musica de los anos 80.</item>
-            <item>Rocket y Groot son dos personajes destacados.</item>
-        </string-array>
+    <string-array name="spider_man">
+        <item>El heroe es conocido por su agilidad y sentido aracnido.</item>
+        <item>La historia se centra en un joven estudiante de secundaria con habilidades sobrehumanas.</item>
+        <item>Su traje tiene detalles iconicos como una arana en el pecho.</item>
+        <item>Peter Parker, el alter ego de Spider-Man, es interpretado por Tom Holland en el MCU.</item>
+    </string-array>
 
-        <string-array name="daredevil">
-            <item>El heroe es un abogado ciego que lucha contra la injusticia.</item>
-            <item>La serie de Netflix es conocida por su tono mas oscuro y realista.</item>
-            <item>El personaje principal es conocido por sus habilidades mejoradas y su astucia.</item>
-        </string-array>
+    <string-array name="guardians_of_the_galaxy">
+        <item>El equipo esta formado por personajes de diferentes especies y origenes.</item>
+        <item>La pelicula presenta una banda sonora memorable de musica de los anos 80.</item>
+        <item>Rocket y Groot son dos personajes destacados.</item>
+        <item>Star-Lord, interpretado por Chris Pratt, es el lider de los Guardianes de la Galaxia.</item>
+    </string-array>
 
-        <string-array name="black_panther">
-            <item>La historia se desarrolla en una nacion africana ficticia llamada Wakanda.</item>
-            <item>El protagonista es el rey de Wakanda y posee un traje hecho de un metal especial.</item>
-            <item>La pelicula destaca la importancia de la cultura africana.</item>
-        </string-array>
+    <string-array name="daredevil">
+        <item>El heroe es un abogado ciego que lucha contra la injusticia.</item>
+        <item>La serie de Netflix es conocida por su tono mas oscuro y realista.</item>
+        <item>El personaje principal es conocido por sus habilidades mejoradas y su astucia.</item>
+        <item>Charlie Cox interpreta a Matt Murdock, alias Daredevil, en la serie.</item>
+    </string-array>
 
-        <string-array name="doctor_strange">
-            <item>El protagonista es un neurocirujano que busca la curacion despues de un accidente.</item>
-            <item>La pelicula explora dimensiones alternativas y la magia.</item>
-            <item>El personaje principal aprende artes misticas bajo la tutela de Anciano.</item>
-        </string-array>
+    <string-array name="black_panther">
+        <item>La historia se desarrolla en una nacion africana ficticia llamada Wakanda.</item>
+        <item>El protagonista es el rey de Wakanda y posee un traje hecho de un metal especial.</item>
+        <item>La pelicula destaca la importancia de la cultura africana.</item>
+        <item>Chadwick Boseman interpreta a T Challa, el Black Panther.</item>
+    </string-array>
 
-        <string-array name="deadpool">
-            <item>El heroe es conocido por su habilidad para romper la cuarta pared.</item>
-            <item>La pelicula es conocida por su humor irreverente y clasificacion R.</item>
-            <item>El personaje principal porta un traje rojo y negro distintivo.</item>
-        </string-array>
+    <string-array name="doctor_strange">
+        <item>El protagonista es un neurocirujano que busca la curacion despues de un accidente.</item>
+        <item>La pelicula explora dimensiones alternativas y la magia.</item>
+        <item>El personaje principal aprende artes misticas bajo la tutela de Anciano.</item>
+        <item>Benedict Cumberbatch interpreta a Doctor Strange en el MCU.</item>
+    </string-array>
 
-        <string-array name="thor">
-            <item>El heroe es un dios nordico del trueno.</item>
-            <item>La historia involucra la conexion entre Asgard y la Tierra.</item>
-            <item>Thor posee un martillo encantado llamado Mjolnir.</item>
-        </string-array>
+    <string-array name="deadpool">
+        <item>El heroe es conocido por su habilidad para romper la cuarta pared.</item>
+        <item>La pelicula es conocida por su humor irreverente y clasificacion R.</item>
+        <item>El personaje principal porta un traje rojo y negro distintivo.</item>
+        <item>Ryan Reynolds interpreta a Deadpool en la pelicula.</item>
+    </string-array>
+
+    <string-array name="thor">
+        <item>El heroe es un dios nordico del trueno.</item>
+        <item>La historia involucra la conexion entre Asgard y la Tierra.</item>
+        <item>Thor posee un martillo encantado llamado Mjolnir.</item>
+        <item>Chris Hemsworth interpreta a Thor en el MCU.</item>
+    </string-array>
 </resources>

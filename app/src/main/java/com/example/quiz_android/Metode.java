@@ -3,6 +3,7 @@ package com.example.quiz_android;
 import static java.util.logging.Logger.global;
 
 import android.content.Context;
+import android.util.Log;
 import android.widget.Button;
 import android.content.res.Resources;
 import java.util.ArrayList;
@@ -17,6 +18,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Metode extends AppCompatActivity {
     public static int contArray = 0;
+
+    public static int getContArray() {
+        return contArray;
+    }
+
+    public static void setContArray(int contArray) {
+        Metode.contArray = contArray;
+    }
+
     public Metode(){}
     public static Pelicula[] generadorPelicules(String[] respostes, int[] imatges,Context context) {
         Pelicula[] arrayPelicules = new Pelicula[respostes.length];
@@ -55,12 +65,15 @@ public class Metode extends AppCompatActivity {
     public static List<Integer> GeneraArrayImatges(int[] imatges, String idPista, int contArray) {
         List<Integer> idImatges = new ArrayList<>();
 
-        for (int i = contArray; i < imatges.length; i++) {
-            for (int t = 0; t < 4; t++) {
-                idImatges.add(imatges[i]);
+            int contarrayAux = contArray + 4;
+
+            for (; contArray<contarrayAux;setContArray(contArray++) ) {
+
+                idImatges.add(imatges[contArray]);
             }
-        }
+        Log.d("TAG", idImatges + "");
+            setContArray(contArray++);
+
         return idImatges;
     }
-
 }
