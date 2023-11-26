@@ -1,6 +1,7 @@
 package com.example.quiz_android;
 
 
+import android.content.Intent;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -48,6 +49,7 @@ public class Partida extends AppCompatActivity {
             progressBar.incrementProgressBy(10);
             String text1 = String.valueOf(ratxa);
             score.setText("Ratxa: " + text1);
+            FinalPartida();
             return true;
         }
         else{
@@ -55,7 +57,14 @@ public class Partida extends AppCompatActivity {
             progressBar.setProgress(0);
             String text1 = String.valueOf(ratxa);
             score.setText("Ratxa: " + text1);
+            FinalPartida();
             return false;
+        }
+    }
+    public void FinalPartida(){
+        if(ratxa == 10) {
+            Intent intent = new Intent(Partida.this, Benvinguda.class);
+            startActivity(intent);
         }
     }
 }
