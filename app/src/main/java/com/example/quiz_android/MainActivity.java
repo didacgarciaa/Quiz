@@ -1,6 +1,7 @@
 package com.example.quiz_android;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -31,12 +32,12 @@ public class MainActivity extends AppCompatActivity {
         ImageView menuSettings = findViewById(R.id.menuSettings);
         ProgressBar progressBar = findViewById(R.id.progressBar);
         TextView score = findViewById(R.id.score);
-        TextView bestScore = findViewById(R.id.bestScore);
-
+        TextView textPista = findViewById(R.id.textPista);
 
         int [] idImatges = Resources.getIdImatges();
         String[] respostes = Resources.getRespostes();
-        Pelicula[] peliculas  = Metode.generadorPelicules(respostes,idImatges);
+        String[] pistes = getResources().getStringArray(R.array.pistes);
+        Pelicula[] peliculas  = Metode.generadorPelicules(respostes,idImatges,this);
 
         for (int i = 0; i < 4; i++) {
             int ButtonId = getResources().getIdentifier("resposta" + (i + 1), "id", getPackageName());
@@ -45,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
             buttons[i].setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    if(partida.comprobarResposta(buttons[finalI].getText().toString(),peliculas,progressBar,score)){
+                    if(partida.comprobarResposta(buttons[finalI].getText().toString(),peliculas,progressBar,score,textPista)){
                         partida.mostrarPelicula(peliculas,imatge ,buttons);
                     };
                 }
@@ -63,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "Torna-ho a intentar quan acabis la partida", Toast.LENGTH_SHORT).show();
                 }
             });
+
 
         }
 

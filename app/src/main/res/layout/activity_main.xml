@@ -75,12 +75,12 @@
     <ProgressBar
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="0dp"
+        android:layout_width="177dp"
         android:layout_height="0dp"
         android:progressTint="#11CD88"
-        app:layout_constraintBottom_toTopOf="@+id/guideline10"
-        app:layout_constraintEnd_toStartOf="@+id/guideline12"
-        app:layout_constraintStart_toStartOf="@+id/guideline11"
+        app:layout_constraintBottom_toBottomOf="@+id/score"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline9" />
 
     <TextView
@@ -95,19 +95,18 @@
         app:layout_constraintTop_toTopOf="@+id/guideline14" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textPista"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="38dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="38dp"
-        android:layout_marginBottom="2dp"
-        android:text="TextView"
+        android:layout_marginStart="37dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginBottom="1dp"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/guideline8"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/progressBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline7"
+        app:layout_constraintTop_toBottomOf="@+id/imatge"
         tools:ignore="VisualLintBounds" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -164,7 +163,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="776dp"
+        app:layout_constraintGuide_begin="739dp"
         tools:ignore="VisualLintBounds" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -172,7 +171,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="383dp" />
+        app:layout_constraintGuide_begin="407dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline10"

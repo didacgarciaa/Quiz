@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
 
-    <array name="nom_pistes">
+    <array name="pistes">
         <item>@array/iron_man</item>
         <item>@array/hulk</item>
         <item>@array/avengers</item>
@@ -72,5 +72,4 @@
             <item>La historia involucra la conexion entre Asgard y la Tierra.</item>
             <item>Thor posee un martillo encantado llamado Mjolnir.</item>
         </string-array>
-
 </resources>
