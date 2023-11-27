@@ -121,7 +121,7 @@ public class Partida extends AppCompatActivity {
     public void FinalPartida(Context context){
         nErrors = 1;
         contador = 0;
-        Intent intent = new Intent(context, Benvinguda.class);
+        Intent intent = new Intent(context,PantallaFinal.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(intent);
         finish();
