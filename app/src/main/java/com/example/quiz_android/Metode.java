@@ -37,6 +37,7 @@ public class Metode extends AppCompatActivity {
             pelicula.setPistes(metode.GeneraArrayPistes(idPistes[i],context));
             arrayPelicules[i] = pelicula;
         }
+        setContArray(0);
         return arrayPelicules;
     }
     public static List<Integer> generarRespostas(Set<Integer> nums) {
@@ -64,16 +65,21 @@ public class Metode extends AppCompatActivity {
     }
     public static List<Integer> GeneraArrayImatges(int[] imatges, String idPista, int contArray) {
         List<Integer> idImatges = new ArrayList<>();
-
+        Log.e("GeneraArrayImatges", "Invalid contArray index: " + contArray);
+        if (contArray >= 0 && contArray < imatges.length) {
             int contarrayAux = contArray + 4;
 
-            for (; contArray<contarrayAux;setContArray(contArray++) ) {
-
-                idImatges.add(imatges[contArray]);
+            for (int i = contArray; i < contarrayAux && i < imatges.length+1; i++) {
+                idImatges.add(imatges[i]);
+                Log.d("TAG", i + "");
             }
-        Log.d("TAG", idImatges + "");
-            setContArray(contArray++);
+
+            setContArray(contarrayAux); // Update the contArray outside the loop
+        } else {
+            Log.e("GeneraArrayImatges", "Invalid contArray index: " + contArray);
+        }
 
         return idImatges;
     }
+
 }

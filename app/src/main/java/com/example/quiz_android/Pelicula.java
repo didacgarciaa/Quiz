@@ -22,5 +22,4 @@ public class Pelicula {
         return idFoto;
     }
 
-
 }

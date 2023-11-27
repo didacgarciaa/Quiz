@@ -70,8 +70,6 @@ public class Partida extends AppCompatActivity {
 
 
                 if (context != null) {
-                    Log.d("TAG", context.toString());
-
                     BD bdUtilitat = new BD(context);
                     SQLiteDatabase bd = bdUtilitat.getWritableDatabase();
 
@@ -81,8 +79,7 @@ public class Partida extends AppCompatActivity {
                     valores.put("ratxe", ratxa);
                     long id;
                     id = bd.insert("Resultats",null,valores);
-                    Intent intent = new Intent(context, Benvinguda.class);
-                    startActivity(intent);
+                    FinalPartida(context);
 
                     bd.close();
                 }
@@ -94,45 +91,40 @@ public class Partida extends AppCompatActivity {
                 String text1 = String.valueOf(ratxa);
                 score.setText("Ratxa: " + text1);
                 textPista.setText("");
-                FinalPartida(this);
                 return true;
             }
 
         }
         else{
             if(nErrors == 4) {
+                nErrors = 1;
+                contador = 0;
                 Intent intent = new Intent(context, Benvinguda.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                finish();
                 context.startActivity(intent);
+                finish();
             }
             else{
                 ratxa = 0;
-                FinalPartida(context);
                 progressBar.setProgress(0);
                 String text1 = String.valueOf(ratxa);
                 score.setText("Ratxa: " + text1);
                 String[]pistes = arrayPelicules[contador].getPistes();
-
                 textPista.setText(pistes[nErrors]);
                 List<Integer> idFoto = arrayPelicules[contador].getFoto();
-                Log.d("TAG", idFoto.get(nErrors) + "");
                 imatge.setImageResource(idFoto.get(nErrors));
-                Log.d("TAG", nErrors +" " + (nErrors == 4));
                 nErrors++;
             }
-
             return false;
         }
     }
     public void FinalPartida(Context context){
-        if(ratxa == 10 ) {
-
-            Intent intent = new Intent(context, Benvinguda.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            finish();
-            context.startActivity(intent);
-        }
+        nErrors = 1;
+        contador = 0;
+        Intent intent = new Intent(context, Benvinguda.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.startActivity(intent);
+        finish();
     }
 
 }
